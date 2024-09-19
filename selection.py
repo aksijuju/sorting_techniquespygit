@@ -5,12 +5,7 @@ class Selection_sort:
             for j in range(i, len(lst)):
                 if lst[j] < lst[min]:
                     min = j
-            if min != i:
-                lst[i] = lst[i] + lst[min]
-                lst[min] = lst[i] - lst[min]
-                lst[i] = lst[i] - lst[min]
-            else:
-                continue
+            lst[i], lst[min] = lst[min], lst[i]
         return lst
 
 lst = []
